@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.masterly">
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -28,6 +29,13 @@
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".TimerActivity"></activity>
+        <meta-data
+            android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr" />
+        <activity android:name=".NoteActivity"
+            android:label="Notes"/>
+        <activity android:name=".CameraResult"
+            android:label="Content"></activity>
     </application>
 
 </manifest>
