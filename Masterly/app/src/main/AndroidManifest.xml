@@ -19,11 +19,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TodoActivity"
-            android:label="ToDo"/>
-        <activity android:name=".CalendarActivity"
-            android:label="Calendar">
-        </activity>
+        <activity
+            android:name=".TodoActivity"
+            android:label="ToDo" />
+        <activity
+            android:name=".CalendarActivity"
+            android:label="Calendar" />
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".SignUpActivity"></activity>
     </application>
 
 </manifest>
