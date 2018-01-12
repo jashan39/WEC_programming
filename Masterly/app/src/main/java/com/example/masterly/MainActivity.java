@@ -94,7 +94,8 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, TodoActivity.class);
             startActivity(intent);
         } else if (id == R.id.notes) {
-
+            Intent intent = new Intent(this, NoteActivity.class);
+            startActivity(intent);
         } else if (id == R.id.calendar) {
             Intent intent = new Intent(this, CalendarActivity.class);
             startActivity(intent);
