@@ -10,7 +10,6 @@
         android:id="@+id/list_todo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#d3d3d3"
-        android:layout_marginBottom="66dp" />
+        android:background="#d3d3d3" />
 
 </RelativeLayout>
