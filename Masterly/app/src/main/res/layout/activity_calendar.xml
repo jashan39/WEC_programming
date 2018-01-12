@@ -61,7 +61,8 @@
         android:textSize="15dp"
         android:layout_marginBottom="10dp"
         android:layout_above="@+id/addEventButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#4f7fc1"/>
 
 
 

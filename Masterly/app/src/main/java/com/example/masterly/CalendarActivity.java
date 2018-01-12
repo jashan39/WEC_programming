@@ -33,7 +33,7 @@ public class CalendarActivity extends AppCompatActivity {
 
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(false);
-        actionBar.setTitle(null);
+        actionBar.setTitle("January- 2018");
 
         compactCalendar = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
         compactCalendar.setUseThreeLetterAbbreviation(true);
@@ -74,6 +74,8 @@ public class CalendarActivity extends AppCompatActivity {
             @Override
             public void onMonthScroll(Date firstDayOfNewMonth) {
                 actionBar.setTitle(dateFormatMonth.format(firstDayOfNewMonth));
+                TextView currentEvents = (TextView) findViewById(R.id.currentEventsText);
+                currentEvents.setText(CalendarDatesList.eventList.get(" "));
             }
 
         });
