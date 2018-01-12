@@ -26,7 +26,8 @@
             android:name=".CalendarActivity"
             android:label="Calendar" />
         <activity android:name=".LogInActivity" />
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".TimerActivity"></activity>
     </application>
 
 </manifest>
