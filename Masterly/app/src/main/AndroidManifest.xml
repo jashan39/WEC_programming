@@ -20,9 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".TodoActivity" />
-        <activity android:name=".CalendarActivity"
-            android:label="Calendar">
-        </activity>
+        <activity
+            android:name=".CalendarActivity"
+            android:label="Calendar"></activity>
+        <activity android:name=".CalendarDatesList"></activity>
     </application>
 
 </manifest>
