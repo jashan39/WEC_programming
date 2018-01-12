@@ -31,8 +31,10 @@
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="ocr" />
-        <activity android:name=".NoteActivity" />
-        <activity android:name=".CameraResult"></activity>
+        <activity android:name=".NoteActivity"
+            android:label="Notes"/>
+        <activity android:name=".CameraResult"
+            android:label="Content"></activity>
     </application>
 
 </manifest>

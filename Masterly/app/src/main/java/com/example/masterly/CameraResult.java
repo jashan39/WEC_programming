@@ -17,18 +17,14 @@ public class CameraResult extends AppCompatActivity {
     TextToSpeech t1;
     Button b1;
     TextView content;
-    TextView header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera_result);
         b1 = (Button)findViewById(R.id.button4);
-        header = (TextView) findViewById(R.id.textView2);
         content = (TextView) findViewById(R.id.textView3);
         content.setMovementMethod(ScrollingMovementMethod.getInstance());
-
-        header.setPaintFlags(header.getPaintFlags() |   Paint.UNDERLINE_TEXT_FLAG);
 
         Intent intent = getIntent();
         final String message = intent.getStringExtra(NoteActivity.EXTRA_MESSAGE);

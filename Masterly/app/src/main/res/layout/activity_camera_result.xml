@@ -8,16 +8,6 @@
     tools:context="com.example.masterly.CameraResult">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:layout_marginTop="15dp"
-        android:text="CONTENT"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,7 +17,7 @@
         android:scrollbars="vertical"
         android:layout_marginTop="20dp"
         android:text=""
-        android:layout_below="@+id/textView2"
+        android:hint="..."
         android:layout_centerHorizontal="true" />
 
     <Button
