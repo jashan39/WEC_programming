@@ -24,15 +24,11 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="bottom">
-        <EditText
-            android:id="@+id/todoText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
         <Button
             android:id="@+id/addButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_item"/>
+            android:text="Add task"/>
     </LinearLayout>
 
 </LinearLayout>
