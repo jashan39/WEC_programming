@@ -29,7 +29,6 @@ public class CalendarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
-        Intent intent = getIntent();
 
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(false);
@@ -38,14 +37,9 @@ public class CalendarActivity extends AppCompatActivity {
         compactCalendar = (CompactCalendarView) findViewById(R.id.compactcalendar_view);
         compactCalendar.setUseThreeLetterAbbreviation(true);
 
-        //Set an event - Nav's birthday - January 15
-        Event ev1 = new Event(Color.GREEN, 1433701251000L, "Nav's 22nd Birthday");
-        compactCalendar.addEvent(ev1);
-
         compactCalendar.setListener(new CompactCalendarView.CompactCalendarViewListener() {
             @Override
             public void onDayClick(Date dateClicked) {
-                Context context = getApplicationContext();
 
                 final String dateChosen = dateClicked.toString();
 
@@ -64,7 +58,13 @@ public class CalendarActivity extends AppCompatActivity {
                         new View.OnClickListener(){
                             public void onClick(View view){
                                 String eventText = newEventText.getText().toString();
-                                CalendarDatesList.eventList.put(dateChosen, eventText);
+                                String updatedEventText = "";
+                                if(CalendarDatesList.eventList.containsKey(dateChosen)) {
+                                    updatedEventText = CalendarDatesList.eventList.get(dateChosen) + "\n" + eventText;
+                                }else{
+                                    updatedEventText = eventText;
+                                }
+                                    CalendarDatesList.eventList.put(dateChosen, updatedEventText);
                                 newEventText.setText("");
                             }
                         }

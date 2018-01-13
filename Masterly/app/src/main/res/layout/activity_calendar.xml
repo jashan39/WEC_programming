@@ -59,6 +59,7 @@
         android:hint="Enter Here"
         android:ems="10"
         android:textSize="15dp"
+        android:textCursorDrawable="@null"
         android:layout_marginBottom="10dp"
         android:layout_above="@+id/addEventButton"
         android:layout_centerHorizontal="true"

@@ -29,7 +29,7 @@
             android:label="Calendar" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
-
+        <activity android:name=".TimerActivity"></activity>
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="ocr" />
