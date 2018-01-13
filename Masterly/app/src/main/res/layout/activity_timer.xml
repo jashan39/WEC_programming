@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.masterly.TimerActivity">
+    tools:context="com.example.masterly.TimerActivity"
+    android:background="@drawable/plainwood">
 
     <TextView
         android:id="@+id/countdownTextView"
@@ -51,6 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="HH"
+        android:textColor="#fff"
         android:inputType="number"
         android:maxLength="2"
         android:ems="2"
@@ -68,6 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="MM"
+        android:textColor="#fff"
         android:inputType="number"
         android:maxLength="2"
         android:ems="2"
@@ -84,6 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="SS"
+        android:textColor="#fff"
         android:inputType="number"
         android:maxLength="2"
         android:ems="2"
