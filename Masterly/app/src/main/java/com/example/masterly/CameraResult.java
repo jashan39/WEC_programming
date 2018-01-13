@@ -48,6 +48,28 @@ public class CameraResult extends AppCompatActivity {
             }
         });
 
+        edit.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                final EditText taskEditText = new EditText(CameraResult.this);
+                taskEditText.setText(message);
+                AlertDialog alertDialog = new AlertDialog.Builder(CameraResult.this)
+                        .setTitle("Edit Notes")
+                        .setView(taskEditText)
+                        .setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                message = String.valueOf(taskEditText.getText());
+                                content.setText(message);
+                            }
+                        })
+                        .setNegativeButton("Cancel", null)
+                        .create();
+                alertDialog.show();
+            }
+        });
+
+
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
