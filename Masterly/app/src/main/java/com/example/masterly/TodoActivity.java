@@ -61,18 +61,30 @@ public class TodoActivity extends AppCompatActivity {
             listView.setAdapter(adapter);
 
             // Add items via the Button and EditText at the bottom of the view.
-            final EditText text = (EditText) findViewById(R.id.todoText);
             final Button button = (Button) findViewById(R.id.addButton);
+
             button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    list_items item = new list_items(text.getText().toString());
-                    mDatabase.child("users").child(mUserId).child("items").push().setValue(item);
-                    text.setText("");
+
+                    final EditText taskEditText = new EditText(TodoActivity.this);
+                    AlertDialog alertDialog = new AlertDialog.Builder(TodoActivity.this)
+                            .setTitle("Add a new task")
+                            .setView(taskEditText)
+                            .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    list_items item = new list_items(String.valueOf(taskEditText.getText()));
+                                    mDatabase.child("users").child(mUserId).child("ToDo").push().setValue(item);
+                                }
+                            })
+                            .setNegativeButton("Cancel", null)
+                            .create();
+                    alertDialog.show();
                 }
             });
 
             // Use Firebase to populate the list.
-            mDatabase.child("users").child(mUserId).child("items").addChildEventListener(new ChildEventListener() {
+            mDatabase.child("users").child(mUserId).child("ToDo").addChildEventListener(new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                     adapter.add((String) dataSnapshot.child("title").getValue());
@@ -101,7 +113,7 @@ public class TodoActivity extends AppCompatActivity {
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    mDatabase.child("users").child(mUserId).child("items")
+                    mDatabase.child("users").child(mUserId).child("ToDo")
                             .orderByChild("title")
                             .equalTo((String) listView.getItemAtPosition(position))
                             .addListenerForSingleValueEvent(new ValueEventListener() {
