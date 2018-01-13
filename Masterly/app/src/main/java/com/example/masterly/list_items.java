@@ -6,19 +6,19 @@ package com.example.masterly;
 
 public class list_items {
 
-    private String title;
+    private String Description;
 
     public list_items() {}
 
     public list_items(String title) {
-        this.title = title;
+        this.Description = title;
     }
 
     public String getTitle() {
-        return title;
+        return Description;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.Description = title;
     }
 }
