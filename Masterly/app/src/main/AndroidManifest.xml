@@ -29,7 +29,9 @@
             android:label="Calendar" />
         <activity android:name=".LogInActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".TimerActivity"></activity>
+        <activity android:name=".TimerActivity"
+            android:label="Timer"/>
+
         <meta-data
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="ocr" />
@@ -40,7 +42,9 @@
         <activity
             android:name=".CameraResult"
             android:label="Content" />
-        <activity android:name=".EditTextActivity"></activity>
+        <activity android:name=".EditTextActivity" />
+        <activity android:name=".all_notes"
+            android:label="Notes"></activity>
     </application>
 
 </manifest>

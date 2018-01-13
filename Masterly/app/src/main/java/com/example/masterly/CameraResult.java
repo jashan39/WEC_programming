@@ -54,7 +54,6 @@ public class CameraResult extends AppCompatActivity {
 
             mUserId = mFirebaseUser.getUid();
 
-
             b1 = (Button) findViewById(R.id.button4);
             edit = (Button) findViewById(R.id.button10);
             content = (TextView) findViewById(R.id.textView3);
@@ -105,7 +104,8 @@ public class CameraResult extends AppCompatActivity {
             save = (Button) findViewById(R.id.button11);
             save.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
-                    mDatabase.child("users").child(mUserId).child("Notes").push().setValue(message);
+                    list_items item = new list_items(String.valueOf(message));
+                    mDatabase.child("users").child(mUserId).child("Notes").push().setValue(item);
                 }
             });
 
